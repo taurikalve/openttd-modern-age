@@ -1,0 +1,62 @@
+grf {
+  grfid: "TK\01\01";
+  name: string(STR_GRF_NAME);
+  desc: string(STR_GRF_DESCRIPTION);
+  version: 0;
+  min_compatible_version: 0;
+}
+
+// Trains
+item (FEAT_TRAINS, asia_star, 26) {
+  property {
+    model_life: VEHICLE_NEVER_EXPIRES;
+  }
+}
+item (FEAT_TRAINS, turner_turbo, 20) {
+  property {
+    model_life: VEHICLE_NEVER_EXPIRES;
+    climates_available: ALL_CLIMATES;
+  }
+}
+// Helicopters
+item (FEAT_AIRCRAFT, guru_x2, 39) {
+  property {
+    model_life: VEHICLE_NEVER_EXPIRES;
+  }
+}
+// Big planes
+item (FEAT_AIRCRAFT, yate_haugan, 3) {
+  property {
+    model_life: VEHICLE_NEVER_EXPIRES;
+  }
+}
+item (FEAT_AIRCRAFT, darwin_600, 16) {
+  property {
+    model_life: VEHICLE_NEVER_EXPIRES;
+  }
+}
+item (FEAT_AIRCRAFT, airtaxi_a33, 21) {
+  property {
+    model_life: VEHICLE_NEVER_EXPIRES;
+  }
+}
+item (FEAT_AIRCRAFT, bakeluc_lb11, 9) {
+  property {
+    model_life: VEHICLE_NEVER_EXPIRES;
+  }
+}
+// Small planes
+item(FEAT_AIRCRAFT, dinger_100, 23) {
+  property {
+    model_life: VEHICLE_NEVER_EXPIRES;
+  }
+}
+
+// Disable monorail 54-83 and maglev 84-115
+disable_item(FEAT_TRAINS, 54, 115);
+// Planes
+disable_item(FEAT_AIRCRAFT, 24, 32);
+
+sort (FEAT_TRAINS, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, turner_turbo, 21, 22, 23, 24, 25, asia_star, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53]);
+
+sort (FEAT_AIRCRAFT, [0, 1, 2, yate_haugan, 4, 5, 6, 7, 8, bakeluc_lb11, 10, 11, 12, 13, 14, 15, darwin_600, 17, 18, 19, 20, airtaxi_a33, 22, dinger_100, 33, 34, 35, 36, 37, 38, guru_x2, 40]);

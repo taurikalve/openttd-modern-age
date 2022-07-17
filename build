@@ -1,0 +1,9 @@
+#!/bin/bash
+
+name='modern-age'
+
+rm -rf dist && \
+  mkdir dist && \
+  cd src && \
+  nmlc -o ../dist/$name.grf $name.nml && \
+  cp ../dist/$name.grf ~/.local/share/openttd/newgrf

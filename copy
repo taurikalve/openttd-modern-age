@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp dist/newgrf-test.grf ~/.local/share/openttd/newgrf
