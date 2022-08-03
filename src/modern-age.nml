@@ -9,70 +9,90 @@ grf {
 // Trains
 item (FEAT_TRAINS, asia_star, 26) {
   property {
-    model_life: VEHICLE_NEVER_EXPIRES;
+    // model_life: VEHICLE_NEVER_EXPIRES;
+    model_life: 99;
     climates_available: ALL_CLIMATES;
   }
 }
 item (FEAT_TRAINS, sh_125, 22) {
   property {
-    model_life: VEHICLE_NEVER_EXPIRES;
+    // model_life: VEHICLE_NEVER_EXPIRES;
+    model_life: 99;
     climates_available: ALL_CLIMATES;
   }
 }
 item (FEAT_TRAINS, turner_turbo, 20) {
   property {
-    model_life: VEHICLE_NEVER_EXPIRES;
+    // model_life: VEHICLE_NEVER_EXPIRES;
+    model_life: 99;
     climates_available: ALL_CLIMATES;
   }
 }
-item (FEAT_TRAINS, cs_4000, 16) {
+item (FEAT_TRAINS, z1, 55) {
   property {
-    model_life: VEHICLE_NEVER_EXPIRES;
-    climates_available: ALL_CLIMATES;
-    speed: 210 km/h;
-    power: 6000 hp;
+    track_type: RAIL;
+    engine_class: ENGINE_CLASS_DIESEL;
+    // model_life: VEHICLE_NEVER_EXPIRES;
+    model_life: 99;
+    // introduction_date: date(2005,01,01); // date(2005,01,01)
+    // speed: 270 km/h; // 336 km/h
+    // power: 9000 hp; // 10000 hp
+    // reliability_decay: 1; // 20
+    weight: 210; // 85
+    dual_headed: 0; // 1
+    default_cargo_type: 0; // CC_PASSENGERS
+    cargo_capacity: 0; // 25
+    // refit_cost: 0; // 8
+    vehicle_life: 25;
   }
 }
 
 // Helicopters
 item (FEAT_AIRCRAFT, guru_x2, 39) {
   property {
-    model_life: VEHICLE_NEVER_EXPIRES;
+    // model_life: VEHICLE_NEVER_EXPIRES;
+    model_life: 99;
   }
 }
 // Big planes
 item (FEAT_AIRCRAFT, yate_haugan, 3) {
   property {
-    model_life: VEHICLE_NEVER_EXPIRES;
+    // model_life: VEHICLE_NEVER_EXPIRES;
+    model_life: 99;
   }
 }
 item (FEAT_AIRCRAFT, darwin_600, 16) {
   property {
-    model_life: VEHICLE_NEVER_EXPIRES;
+    // model_life: VEHICLE_NEVER_EXPIRES;
+    model_life: 99;
   }
 }
 item (FEAT_AIRCRAFT, airtaxi_a33, 21) {
   property {
-    model_life: VEHICLE_NEVER_EXPIRES;
+    // model_life: VEHICLE_NEVER_EXPIRES;
+    model_life: 99;
   }
 }
 item (FEAT_AIRCRAFT, bakeluc_lb11, 9) {
   property {
-    model_life: VEHICLE_NEVER_EXPIRES;
+    // model_life: VEHICLE_NEVER_EXPIRES;
+    model_life: 99;
   }
 }
 // Small planes
 item(FEAT_AIRCRAFT, dinger_100, 23) {
   property {
-    model_life: VEHICLE_NEVER_EXPIRES;
+    // model_life: VEHICLE_NEVER_EXPIRES;
+    model_life: 99;
   }
 }
 
 // Disable monorail 54-83 and maglev 84-115
-disable_item(FEAT_TRAINS, 54, 115);
+disable_item(FEAT_TRAINS, 54);
+disable_item(FEAT_TRAINS, 56, 115);
 // Planes
 disable_item(FEAT_AIRCRAFT, 24, 32);
 
-sort (FEAT_TRAINS, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, cs_4000, 17, 18, 19, turner_turbo, 21, sh_125, 23, 24, 25, asia_star, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53]);
+sort (FEAT_TRAINS, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, turner_turbo, 21, sh_125, 23, 24, 25, asia_star, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, z1]);
 
 sort (FEAT_AIRCRAFT, [0, 1, 2, yate_haugan, 4, 5, 6, 7, 8, bakeluc_lb11, 10, 11, 12, 13, 14, 15, darwin_600, 17, 18, 19, 20, airtaxi_a33, 22, dinger_100, 33, 34, 35, 36, 37, 38, guru_x2, 40]);
