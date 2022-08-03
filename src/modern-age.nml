@@ -30,20 +30,45 @@ item (FEAT_TRAINS, turner_turbo, 20) {
 }
 item (FEAT_TRAINS, z1, 55) {
   property {
+    track_type: RAIL; // (MONO)
+    engine_class: ENGINE_CLASS_DIESEL; // (ENGINE_CLASS_MONORAIL)
+    // model_life: VEHICLE_NEVER_EXPIRES; (20)
+    model_life: 99;
+    // introduction_date: date(2005,01,01); // (date(2005,01,01))
+    speed: 270 km/h; // (336 km/h)
+    // power: 9000 hp; // (10000 hp)
+    // reliability_decay: 1; // (20)
+    weight: 200; // (85 x2)
+    dual_headed: 0; // (1)
+    default_cargo_type: 0; // (CC_PASSENGERS)
+    cargo_capacity: 0; // (25)
+    // refit_cost: 0; // (8)
+    vehicle_life: 25; // (20)
+    // sprite_id: 60; // (52) Lev3
+    // sprite_id: 62; // Lev4
+  }
+}
+item (FEAT_TRAINS, lev3, 86) {
+  property {
+    introduction_date: date(2010,01,01); // (2035)
     track_type: RAIL;
     engine_class: ENGINE_CLASS_DIESEL;
-    // model_life: VEHICLE_NEVER_EXPIRES;
     model_life: 99;
-    // introduction_date: date(2005,01,01); // date(2005,01,01)
-    // speed: 270 km/h; // 336 km/h
-    // power: 9000 hp; // 10000 hp
-    // reliability_decay: 1; // 20
-    weight: 210; // 85
-    dual_headed: 0; // 1
-    default_cargo_type: 0; // CC_PASSENGERS
-    cargo_capacity: 0; // 25
-    // refit_cost: 0; // 8
-    vehicle_life: 25;
+    weight: 215; // (130)
+    speed: 360 km/h;
+    vehicle_life: 30;
+  }
+}
+item (FEAT_TRAINS, lev4, 87) {
+  property {
+    introduction_date: date(2020,01,01); // (2037)
+    track_type: RAIL; // (MGLV)
+    engine_class: ENGINE_CLASS_DIESEL; // (ENGINE_CLASS_MAGLEV)
+    model_life: 99;
+    weight: 270; // (150)
+    speed: 450 km/h; // (640 km/h)
+    vehicle_life: 35;
+    dual_headed: 0;
   }
 }
 
@@ -87,12 +112,17 @@ item(FEAT_AIRCRAFT, dinger_100, 23) {
   }
 }
 
+// Trains
 // Disable monorail 54-83 and maglev 84-115
 disable_item(FEAT_TRAINS, 54);
-disable_item(FEAT_TRAINS, 56, 115);
+// Z1
+disable_item(FEAT_TRAINS, 56, 85);
+// Lev3, Lev4
+disable_item(FEAT_TRAINS, 88, 115);
+
 // Planes
 disable_item(FEAT_AIRCRAFT, 24, 32);
 
-sort (FEAT_TRAINS, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, turner_turbo, 21, sh_125, 23, 24, 25, asia_star, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, z1]);
+sort (FEAT_TRAINS, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, turner_turbo, 21, sh_125, 23, 24, 25, asia_star, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, z1, lev3, lev4]);
 
 sort (FEAT_AIRCRAFT, [0, 1, 2, yate_haugan, 4, 5, 6, 7, 8, bakeluc_lb11, 10, 11, 12, 13, 14, 15, darwin_600, 17, 18, 19, 20, airtaxi_a33, 22, dinger_100, 33, 34, 35, 36, 37, 38, guru_x2, 40]);
